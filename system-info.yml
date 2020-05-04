@@ -1,0 +1,11 @@
+---
+ - hosts: node1.example.com
+   name: system configuration information
+   user: root
+   tasks:
+     debug:
+            >
+            name of the machine: {{ ansible_facts.distribution }}
+            operating system  name: {{ ansible_facts.file_variety }}
+
+            ...
